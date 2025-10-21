@@ -1,0 +1,21 @@
+<h2>Lista de Tarefas</h2>
+<p>Total: {{ tarefaService.contar() }}</p>
+
+<!-- Renderização manual (sem ngFor) -->
+<div *ngTemplateOutlet="blocoTarefa; context: { i: 0 }"></div>
+<div *ngTemplateOutlet="blocoTarefa; context: { i: 1 }"></div>
+<div *ngTemplateOutlet="blocoTarefa; context: { i: 2 }"></div>
+
+<ng-template #blocoTarefa let-i="i">
+  <div>
+    <p>
+      {{ tarefas[i]?.nome }} -
+      {{ tarefas[i]?.concluida ? 'Concluída' : 'Pendente' }}
+    </p>
+    <button (click)="concluir(i)">Concluir</button>
+    <button (click)="remover(i)">Remover</button>
+  </div>
+</ng-template>
+
+<br>
+<a routerLink="/cadastro">Voltar ao cadastro</a>
