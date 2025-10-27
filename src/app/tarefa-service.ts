@@ -27,28 +27,4 @@ export class TarefaService {
   contar(): number {
     return this.tarefas.length;
   }
-
-
- /* tarefas: Task[] = [];
-
-  novo: Task = { tarefa: ''};
-
-  concluido: Task = { tarefa: ''};
-  add() {
-    if (!this.novo.tarefa)
-      return;
-    this.tarefas.push({ ...this.novo });
-    this.novo = { tarefa: ''};
-  }
-  concluir() {
-    if (!this.concluido.tarefa)
-      return;
-    this.tarefas.push({ ...this.concluido });
-    this.concluido = { tarefa: ''};
-  }
-  remover(i: number) {
-    this.tarefas.splice(i, 1);
-  }
-
-  */
 }

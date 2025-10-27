@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import {FormsModule}from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { TarefaService } from '../../tarefa-service';
 
 @Component({
   selector: 'app-cadastrar-tarefas',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './cadastrar-tarefas.html',
   styleUrl: './cadastrar-tarefas.css'
 })
@@ -20,20 +22,4 @@ export class CadastrarTarefas {
       this.nomeTarefa = '';
     }
   }
-
-
-
-
-
-
-
-
-
- /* titulo:string = "Cadastrar Tarefa";
-  constructor(private Task: TarefaService ){
-    this.tarefa = Task.add();
-    this.tarefas = tarefas: Task[] = [];
-    this.novo: Task = { tarefa: ''};
-  }
-    */
 }

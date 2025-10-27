@@ -3,6 +3,7 @@ import { CadastrarTarefas } from './components/cadastrar-tarefas/cadastrar-taref
 import { ListaTarefas } from './components/lista-tarefas/lista-tarefas';
 
 export const routes: Routes = [
+  { path: '', redirectTo: '/cadastro', pathMatch: 'full' },
   { path: 'cadastro', component: CadastrarTarefas },
   { path: 'lista', component: ListaTarefas }
 ];

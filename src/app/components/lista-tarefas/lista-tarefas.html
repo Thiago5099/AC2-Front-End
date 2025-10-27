@@ -1,7 +1,6 @@
 <h2>Lista de Tarefas</h2>
 <p>Total: {{ tarefaService.contar() }}</p>
 
-<!-- Renderização manual (sem ngFor) -->
 <div *ngTemplateOutlet="blocoTarefa; context: { i: 0 }"></div>
 <div *ngTemplateOutlet="blocoTarefa; context: { i: 1 }"></div>
 <div *ngTemplateOutlet="blocoTarefa; context: { i: 2 }"></div>
