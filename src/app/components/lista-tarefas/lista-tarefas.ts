@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { TarefaService } from '../../tarefa-service';
 import { Tarefa } from '../../models/tarefa';
 
 @Component({
   selector: 'app-lista-tarefas',
-  imports: [FormsModule, CommonModule, RouterModule],
+  imports: [FormsModule],
   templateUrl: './lista-tarefas.html',
   styleUrl: './lista-tarefas.css'
 })
